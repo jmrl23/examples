@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Push Notification</title>
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <h1>Push Notification</h1>
+    <button id="btn" disabled>Click me</button>
+    <script>
+      (function () {
+        btn.addEventListener('click', function buttonClick() {
+          fetch('/webhook/push', {
+            method: 'POST',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify({
+              title: 'Example',
+              message: 'Hello, World!',
+            }),
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>

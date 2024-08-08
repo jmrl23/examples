@@ -1,0 +1,28 @@
+{
+  "name": "push-notification",
+  "version": "1.0.0",
+  "main": "build/main.js",
+  "author": "Jomariel Gaitera <gaiterajomariel@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc --build",
+    "start": "node .",
+    "start:dev": "ts-node src/main.ts",
+    "gen:vapid": "web-push generate-vapid-keys --json > src/vapid.json"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.11",
+    "@types/serviceworker": "^0.0.89",
+    "@types/web-push": "^3.6.3",
+    "swc": "^1.0.11",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3"
+  },
+  "dependencies": {
+    "@fastify/static": "^7.0.4",
+    "dotenv": "^16.4.5",
+    "fastify": "^4.28.1",
+    "redis": "^4.6.15",
+    "web-push": "^3.6.7"
+  }
+}

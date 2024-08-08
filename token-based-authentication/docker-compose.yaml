@@ -1,0 +1,11 @@
+services:
+  app:
+    build: .
+    environment:
+      REDIS_URL: redis://redis
+    ports:
+      - 3001:3001
+    depends_on:
+      - redis
+  redis:
+    image: redis:7-alpine

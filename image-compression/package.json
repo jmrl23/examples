@@ -1,0 +1,28 @@
+{
+  "name": "image-compression",
+  "version": "1.0.0",
+  "main": "build/main.js",
+  "author": {
+    "name": "Jomariel Gaitera",
+    "email": "gaiterajomariel@gmail.com"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc --build",
+    "start": "node .",
+    "start:dev": "ts-node src/main.ts"
+  },
+  "dependencies": {
+    "etag": "^1.8.1",
+    "jimp": "^0.22.12",
+    "mime-types": "^2.1.35"
+  },
+  "devDependencies": {
+    "@types/etag": "^1.8.3",
+    "@types/mime-types": "^2.1.4",
+    "@types/node": "^20.14.11",
+    "swc": "^1.0.11",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3"
+  }
+}
